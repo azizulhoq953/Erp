@@ -1,0 +1,86 @@
+2026-04-22 11:41:03,794 DEBUG cd erp-service && uv venv env --seed --python python3
+2026-04-22 11:41:06,466 LOG Getting frappe
+2026-04-22 11:41:06,467 DEBUG cd erp-service/apps && git clone https://github.com/frappe/frappe.git --branch version-16 --depth 1 --origin upstream
+2026-04-22 11:41:16,953 LOG Installing frappe
+2026-04-22 11:41:16,956 DEBUG cd /home/azizul-hoq/frappe/erp-service && uv pip install --quiet --upgrade -e /home/azizul-hoq/frappe/erp-service/apps/frappe  --python /home/azizul-hoq/frappe/erp-service/env/bin/python
+2026-04-22 11:41:42,094 DEBUG cd /home/azizul-hoq/frappe/erp-service/apps/frappe && yarn install --check-files
+2026-04-22 11:41:53,657 DEBUG cd erp-service && bench build
+2026-04-22 11:41:53,866 INFO /home/azizul-hoq/.local/bin/bench build
+2026-04-22 11:42:25,550 LOG setting up backups
+2026-04-22 11:42:25,572 LOG backups were set up
+2026-04-22 11:42:25,572 INFO Bench erp-service initialized
+2026-04-22 11:43:20,133 INFO /home/azizul-hoq/.local/bin/bench new-site service
+2026-04-22 11:45:12,053 INFO /home/azizul-hoq/.local/bin/bench get-app --branch version-16 erpnext
+2026-04-22 11:45:12,767 LOG Getting erpnext
+2026-04-22 11:45:12,767 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-16 --depth 1 --origin upstream
+2026-04-22 11:45:24,303 LOG Installing erpnext
+2026-04-22 11:45:24,303 DEBUG cd /home/azizul-hoq/frappe/erp-service && uv pip install --quiet --upgrade -e /home/azizul-hoq/frappe/erp-service/apps/erpnext  --python /home/azizul-hoq/frappe/erp-service/env/bin/python
+2026-04-22 11:45:26,051 DEBUG cd /home/azizul-hoq/frappe/erp-service/apps/erpnext && yarn install --check-files
+2026-04-22 11:45:26,548 DEBUG bench build --app erpnext
+2026-04-22 11:45:26,750 INFO /home/azizul-hoq/.local/bin/bench build --app erpnext
+2026-04-22 11:46:07,303 INFO /home/azizul-hoq/.local/bin/bench --site service install-app erpnext
+2026-04-22 11:50:23,742 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-22 11:50:24,467 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-22 11:50:24,472 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-22 11:50:24,481 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-22 11:50:24,636 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-22 11:50:30,029 INFO /home/azizul-hoq/.local/bin/bench --site service install-app erpnext
+2026-04-22 11:52:18,201 INFO /home/azizul-hoq/.local/bin/bench use service
+2026-04-22 11:52:38,258 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-22 11:52:38,926 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-22 11:52:38,948 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-22 11:52:38,951 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-22 11:52:39,172 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-22 11:56:43,125 INFO /home/azizul-hoq/.local/bin/bench new-app my-service-app
+2026-04-22 11:56:43,133 LOG creating new app my_service_app
+2026-04-22 11:57:54,934 LOG Installing my_service_app
+2026-04-22 11:57:54,937 DEBUG cd /home/azizul-hoq/frappe/erp-service && uv pip install --quiet --upgrade -e /home/azizul-hoq/frappe/erp-service/apps/my_service_app  --python /home/azizul-hoq/frappe/erp-service/env/bin/python
+2026-04-22 11:57:56,243 DEBUG bench build --app my_service_app
+2026-04-22 11:57:56,454 INFO /home/azizul-hoq/.local/bin/bench build --app my_service_app
+2026-04-22 11:59:06,201 INFO /home/azizul-hoq/.local/bin/bench --site service install-app service
+2026-04-22 11:59:43,105 INFO /home/azizul-hoq/.local/bin/bench --site service install-app my-service-app
+2026-04-22 12:00:02,054 INFO /home/azizul-hoq/.local/bin/bench --verbose --site all backup
+2026-04-22 12:00:33,143 INFO /home/azizul-hoq/.local/bin/bench --site service install-app my_service_app
+2026-04-22 12:02:25,897 INFO /home/azizul-hoq/.local/bin/bench get-app --branch version-16 crm
+2026-04-22 12:02:26,727 LOG Getting crm
+2026-04-22 12:02:26,728 DEBUG cd ./apps && git clone https://github.com/frappe/crm.git --branch version-16 --depth 1 --origin upstream
+2026-04-22 12:02:28,002 WARNING cd ./apps && git clone https://github.com/frappe/crm.git --branch version-16 --depth 1 --origin upstream executed with exit code 128
+2026-04-22 12:02:28,004 WARNING /home/azizul-hoq/.local/bin/bench get-app --branch version-16 crm executed with exit code 1
+2026-04-22 12:06:41,318 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-22 12:06:41,998 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-22 12:06:42,015 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-22 12:06:42,055 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-22 12:06:42,197 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-22 15:07:05,425 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-22 15:07:06,164 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-22 15:07:06,232 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-22 15:07:06,264 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-22 15:07:06,268 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-22 16:38:21,451 INFO /home/azizul-hoq/.local/bin/bench --site service clear-cache
+2026-04-22 16:38:23,823 INFO /home/azizul-hoq/.local/bin/bench --site service clear-website-cache
+2026-04-22 16:39:25,194 INFO /home/azizul-hoq/.local/bin/bench build
+2026-04-22 16:40:01,085 INFO /home/azizul-hoq/.local/bin/bench restart
+2026-04-22 16:40:19,074 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-22 16:40:19,761 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-22 16:40:19,803 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-22 16:40:19,871 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-22 16:40:20,060 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-23 09:09:05,950 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-23 09:09:06,645 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-23 09:09:06,661 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-23 09:09:06,666 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-23 09:09:06,820 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-23 10:25:44,781 INFO /home/azizul-hoq/.local/bin/bench set-config -g server_script_enabled 1
+2026-04-23 12:00:02,044 INFO /home/azizul-hoq/.local/bin/bench --verbose --site all backup
+2026-04-23 15:38:34,820 INFO /home/azizul-hoq/.local/bin/bench --site service mariadb -e SHOW COLUMNS FROM tabTechnician;
+2026-04-26 09:31:07,574 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-26 09:31:08,555 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-26 09:31:08,981 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-26 09:31:09,014 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-26 09:31:09,071 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-26 10:41:22,613 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-26 10:41:23,382 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-26 10:41:23,637 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-26 10:41:23,695 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-26 10:41:23,871 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-26 12:00:01,651 INFO /home/azizul-hoq/.local/bin/bench --verbose --site all backup
