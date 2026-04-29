@@ -109,3 +109,42 @@
 2026-04-27 09:29:36,190 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_doc({'doctype':'Service Item','item_code':'SI-TEST-001','item_name':'Test Service','work_logs':[{'doctype':'Work Log','start_time':'2026-04-27 10:00:00','end_time':'2026-04-27 11:00:00','hours_worked':1.0}]}).insert(ignore_permissions=True).name
 2026-04-27 09:29:43,688 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.delete_doc('Service Item', 'SI-TEST-001', force=1)
 2026-04-27 09:29:50,733 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.db.exists('Service Item', 'SI-TEST-001')
+2026-04-27 11:19:18,687 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-27 11:19:19,373 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-27 11:19:19,405 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-27 11:19:19,438 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-27 11:19:19,476 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-27 12:00:01,463 INFO /home/azizul-hoq/.local/bin/bench --verbose --site all backup
+2026-04-29 10:14:39,410 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-29 10:14:41,425 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-29 10:14:41,584 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-29 10:14:41,660 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-29 10:14:42,128 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-29 10:31:35,157 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-04-29 10:32:15,119 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_all --kwargs {'doctype':'Service Item','limit_page_length':20,'fields':['name','item_code','item_name']}
+2026-04-29 10:52:44,281 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-04-29 10:53:05,837 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-04-29 10:53:38,963 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_all --kwargs {'doctype':'Technician','filters':{'availability_status':'Available'},'limit_page_length':5,'fields':['name','technician_name','phone','availability_status']}
+2026-04-29 10:53:47,781 INFO /home/azizul-hoq/.local/bin/bench --site service execute import frappe; doc = frappe.get_doc("Technician", "ak1f3asamp"); print(doc.technician_name, doc.phone)
+2026-04-29 10:53:54,312 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_doc('Technician', 'ak1f3asamp').technician_name
+2026-04-29 10:55:39,219 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-04-29 10:56:13,467 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_doc({'doctype':'Support Technician','customer':'ASdad','assigned_technician':'ak1f3asamp','posting_date':'2026-04-15','schedule_date':'2026-04-24'}).insert(ignore_permissions=True).name
+2026-04-29 11:03:50,616 INFO /home/azizul-hoq/.local/bin/bench --site service execute [(f.fieldname, f.fieldtype, getattr(f, 'options', None)) for f in frappe.get_meta('Support Technician').fields]
+2026-04-29 11:04:13,619 INFO /home/azizul-hoq/.local/bin/bench --site service execute [(f.fieldname, f.fieldtype, getattr(f, 'options', None)) for f in frappe.get_meta('Service Item').fields]
+2026-04-29 11:06:44,184 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_all('Custom Field', filters={'dt':'Support Technician','fieldname':'custom_service_item'}, fields=['name','options'])
+2026-04-29 11:07:00,391 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.db.set_value('Custom Field', 'Support Technician-custom_service_item', 'options', 'Support Technician Service Item')
+2026-04-29 11:07:06,507 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-04-29 11:07:43,089 INFO /home/azizul-hoq/.local/bin/bench --site service execute doc = frappe.get_doc({'doctype':'Support Technician','customer':'ASdad','assigned_technician':'ak1f3asamp','posting_date':'2026-04-15','schedule_date':'2026-04-24'}).insert(ignore_permissions=True); print(doc.name, len(doc.custom_service_item), len(doc.technician_details_table))
+2026-04-29 11:07:52,203 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_doc({'doctype':'Support Technician','customer':'ASdad','assigned_technician':'ak1f3asamp','posting_date':'2026-04-15','schedule_date':'2026-04-24'}).insert(ignore_permissions=True).name
+2026-04-29 11:08:01,269 INFO /home/azizul-hoq/.local/bin/bench --site service execute [(row.service_item, row.item_name) for row in frappe.get_doc('Support Technician', 'SU-0005').custom_service_item]
+2026-04-29 12:00:01,812 INFO /home/azizul-hoq/.local/bin/bench --verbose --site all backup
+2026-04-29 12:17:55,599 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_all('Work Log', filters={'service_item': 'G-Shirt'}, fields=['name','start_time','end_time','hours_worked'], limit_page_length=10)
+2026-04-29 12:18:36,836 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-04-29 12:19:13,727 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_doc({'doctype':'Work Log','service_item':'G-Shirt','start_time':'2026-04-29 09:00:00','end_time':'2026-04-29 11:00:00','hours_worked':2.0,'notes':'Initial setup'}).insert(ignore_permissions=True).name
+2026-04-29 12:19:30,564 INFO /home/azizul-hoq/.local/bin/bench --site service execute doc = frappe.get_doc({'doctype':'Support Technician','customer':'ASdad','assigned_technician':'ak1f3asamp','posting_date':'2026-04-15','schedule_date':'2026-04-24'}).insert(ignore_permissions=True); print('Name:', doc.name, 'Work Logs:', len(doc.work_logs), 'Service Items:', len(doc.custom_service_item))
+2026-04-29 12:19:40,046 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_doc({'doctype':'Support Technician','customer':'ASdad','assigned_technician':'ak1f3asamp','posting_date':'2026-04-15','schedule_date':'2026-04-24'}).insert(ignore_permissions=True).name
+2026-04-29 12:19:48,712 INFO /home/azizul-hoq/.local/bin/bench --site service execute [len(frappe.get_doc('Support Technician', 'SU-0007').work_logs), len(frappe.get_doc('Support Technician', 'SU-0007').custom_service_item)]
+2026-04-29 12:21:09,532 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-04-29 12:21:46,155 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_doc({'doctype':'Support Technician','customer':'ASdad','assigned_technician':'ak1f3asamp','posting_date':'2026-04-15','schedule_date':'2026-04-24'}).insert(ignore_permissions=True).name
+2026-04-29 12:21:56,793 INFO /home/azizul-hoq/.local/bin/bench --site service execute [len(frappe.get_doc('Support Technician', 'SU-0008').work_logs), len(frappe.get_doc('Support Technician', 'SU-0008').custom_service_item)]
+2026-04-29 12:22:08,905 INFO /home/azizul-hoq/.local/bin/bench --site service execute [(row.service_item, row.start_time, row.hours_worked) for row in frappe.get_doc('Support Technician', 'SU-0008').work_logs]

@@ -1,0 +1,36 @@
+2026-04-27 11:16:00,499 ERROR scheduler Exception in Enqueue Events for Site service
+Traceback (most recent call last):
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/utils/scheduler.py", line 120, in enqueue_events_for_site
+    enqueue_events()
+    ~~~~~~~~~~~~~~^^
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/utils/scheduler.py", line 135, in enqueue_events
+    all_jobs = frappe.get_all("Scheduled Job Type", filters={"stopped": 0}, fields="*")
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/__init__.py", line 1387, in get_all
+    return get_list(doctype, *args, **kwargs)
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/__init__.py", line 1362, in get_list
+    return frappe.model.qb_query.DatabaseQuery(doctype).execute(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/model/qb_query.py", line 212, in execute
+    result = query.run(debug=debug, as_dict=not as_list, update=update)
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/query_builder/utils.py", line 131, in execute_query
+    result = frappe.local.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/database/database.py", line 249, in sql
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/database/database.py", line 147, in connect
+    self.get_connection()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 109, in get_connection
+    conn = self._get_connection()
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 114, in _get_connection
+    return self.create_connection()
+           ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/home/azizul-hoq/frappe/erp-service/apps/frappe/frappe/database/mariadb/mysqlclient.py", line 117, in create_connection
+    return MySQLdb.connect(**self.get_connection_settings())
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/azizul-hoq/frappe/erp-service/env/lib/python3.14/site-packages/MySQLdb/__init__.py", line 121, in Connect
+    return Connection(*args, **kwargs)
+  File "/home/azizul-hoq/frappe/erp-service/env/lib/python3.14/site-packages/MySQLdb/connections.py", line 200, in __init__
+    super().__init__(*args, **kwargs2)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+MySQLdb.OperationalError: (2002, "Can't connect to server on '127.0.0.1' (115)")

@@ -448,3 +448,95 @@ ALTER TABLE `tabService Item` MODIFY `end_time` datetime(6), ADD UNIQUE INDEX IF
 ALTER TABLE `tabService Item` MODIFY `start_time` datetime(6)
 2026-04-27 09:40:05,091 WARNING database DDL Query made to DB:
 ALTER TABLE `tabPayment Entry Service` ADD COLUMN `invoice_number` varchar(140), ADD COLUMN `client` varchar(140), ADD COLUMN `payment_date` datetime(6), ADD COLUMN `amount_paid` decimal(21,9) NOT NULL DEFAULT 0.0, ADD COLUMN `payment_method` varchar(140), ADD COLUMN `payment_type` varchar(140)
+2026-04-27 12:10:29,251 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_workflow_state` varchar(140)
+2026-04-27 12:13:51,746 WARNING database DDL Query made to DB:
+ALTER TABLE `tabTotal Requests_parent` ADD COLUMN `custom_name` varchar(140)
+2026-04-27 12:23:46,454 WARNING database DDL Query made to DB:
+create table `tabMaintenance Schedule Alert` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index creation(creation))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-27 12:26:48,712 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaintenance Schedule Alert` ADD COLUMN `client` varchar(140), ADD COLUMN `service_item` varchar(140), ADD COLUMN `start_date` datetime(6), ADD COLUMN `periodicity` varchar(140)
+2026-04-27 12:28:00,235 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMaintenance Schedule Alert` ADD COLUMN `last_service_date` datetime(6), ADD COLUMN `next_service_due` datetime(6), ADD COLUMN `status` varchar(140)
+2026-04-29 10:22:48,145 WARNING database DDL Query made to DB:
+alter table `tabService Item` add column if not exists parent varchar(140)
+2026-04-29 10:22:48,147 WARNING database DDL Query made to DB:
+alter table `tabService Item` add column if not exists parenttype varchar(140)
+2026-04-29 10:22:48,148 WARNING database DDL Query made to DB:
+alter table `tabService Item` add column if not exists parentfield varchar(140)
+2026-04-29 10:40:05,129 WARNING database DDL Query made to DB:
+alter table `tabService Item` add column if not exists parent varchar(140)
+2026-04-29 10:40:05,130 WARNING database DDL Query made to DB:
+alter table `tabService Item` add column if not exists parenttype varchar(140)
+2026-04-29 10:40:05,130 WARNING database DDL Query made to DB:
+alter table `tabService Item` add column if not exists parentfield varchar(140)
+2026-04-29 10:55:45,472 WARNING database DDL Query made to DB:
+create table `tabSupport Technician Detail` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`skill` varchar(140),
+`contact` varchar(140),
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-29 11:07:11,862 WARNING database DDL Query made to DB:
+create table `tabSupport Technician Service Item` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus tinyint not null default '0',
+			idx int not null default '0',
+			`service_item` varchar(140),
+`item_name` varchar(140),
+`rate` decimal(21,9) NOT NULL DEFAULT 0.0,
+`total_service_time` decimal(21,9) NOT NULL DEFAULT 0.0,
+parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2026-04-29 11:57:12,034 WARNING database DDL Query made to DB:
+alter table `tabWork Log` add column if not exists parent varchar(140)
+2026-04-29 11:57:12,036 WARNING database DDL Query made to DB:
+alter table `tabWork Log` add column if not exists parenttype varchar(140)
+2026-04-29 11:57:12,037 WARNING database DDL Query made to DB:
+alter table `tabWork Log` add column if not exists parentfield varchar(140)
+2026-04-29 12:01:38,354 WARNING database DDL Query made to DB:
+alter table `tabWork Log` add column if not exists parent varchar(140)
+2026-04-29 12:01:38,357 WARNING database DDL Query made to DB:
+alter table `tabWork Log` add column if not exists parenttype varchar(140)
+2026-04-29 12:01:38,360 WARNING database DDL Query made to DB:
+alter table `tabWork Log` add column if not exists parentfield varchar(140)
+2026-04-29 12:18:42,163 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWork Log` ADD COLUMN `service_item` varchar(140)
