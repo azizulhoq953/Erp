@@ -540,3 +540,27 @@ alter table `tabWork Log` add column if not exists parenttype varchar(140)
 alter table `tabWork Log` add column if not exists parentfield varchar(140)
 2026-04-29 12:18:42,163 WARNING database DDL Query made to DB:
 ALTER TABLE `tabWork Log` ADD COLUMN `service_item` varchar(140)
+2026-04-30 12:16:51,361 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Detail` add column if not exists parent varchar(140)
+2026-04-30 12:16:51,363 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Detail` add column if not exists parenttype varchar(140)
+2026-04-30 12:16:51,364 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Detail` add column if not exists parentfield varchar(140)
+2026-04-30 13:28:50,114 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician Service Item` ADD COLUMN `custom_start_time` datetime(6)
+2026-04-30 13:28:50,168 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician Service Item` MODIFY `rate` decimal(21,0) NOT NULL DEFAULT 0.0
+2026-04-30 13:28:50,340 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician Service Item` ADD COLUMN `custom_end_time` datetime(6)
+2026-04-30 14:20:24,445 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_start_date` datetime(6)
+2026-04-30 14:20:24,673 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_end_date` datetime(6)
+2026-04-30 14:20:24,863 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_total_time` decimal(21,9) NOT NULL DEFAULT 0.0
+2026-04-30 15:15:54,670 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_start_time` datetime(6)
+2026-04-30 15:15:55,005 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_end_time` datetime(6)
+2026-04-30 15:15:55,290 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_total_time_taken` decimal(21,9) NOT NULL DEFAULT 0.0

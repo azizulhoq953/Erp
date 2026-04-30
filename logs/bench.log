@@ -148,3 +148,19 @@
 2026-04-29 12:21:46,155 INFO /home/azizul-hoq/.local/bin/bench --site service execute frappe.get_doc({'doctype':'Support Technician','customer':'ASdad','assigned_technician':'ak1f3asamp','posting_date':'2026-04-15','schedule_date':'2026-04-24'}).insert(ignore_permissions=True).name
 2026-04-29 12:21:56,793 INFO /home/azizul-hoq/.local/bin/bench --site service execute [len(frappe.get_doc('Support Technician', 'SU-0008').work_logs), len(frappe.get_doc('Support Technician', 'SU-0008').custom_service_item)]
 2026-04-29 12:22:08,905 INFO /home/azizul-hoq/.local/bin/bench --site service execute [(row.service_item, row.start_time, row.hours_worked) for row in frappe.get_doc('Support Technician', 'SU-0008').work_logs]
+2026-04-30 09:23:07,830 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-30 09:23:08,536 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-30 09:23:08,543 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-30 09:23:08,574 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-30 09:23:08,666 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-30 12:00:01,577 INFO /home/azizul-hoq/.local/bin/bench --verbose --site all backup
+2026-04-30 12:14:45,458 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-30 12:14:46,155 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-30 12:14:46,185 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-30 12:14:46,249 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-30 12:14:46,301 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-04-30 14:17:19,269 INFO /home/azizul-hoq/.local/bin/bench start
+2026-04-30 14:17:20,840 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-04-30 14:17:21,008 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-04-30 14:17:21,079 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-04-30 14:17:21,197 INFO /home/azizul-hoq/.local/bin/bench worker
