@@ -224,3 +224,20 @@
 2026-05-03 12:29:43,819 INFO /home/azizul-hoq/.local/bin/bench worker
 2026-05-03 12:29:43,957 INFO /home/azizul-hoq/.local/bin/bench schedule
 2026-05-03 12:29:44,019 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-05-03 15:38:10,298 INFO /home/azizul-hoq/.local/bin/bench start
+2026-05-03 15:38:10,989 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-05-03 15:38:10,996 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-05-03 15:38:11,019 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-05-03 15:38:11,154 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-05-03 15:55:44,065 INFO /home/azizul-hoq/.local/bin/bench start
+2026-05-03 15:55:44,784 INFO /home/azizul-hoq/.local/bin/bench watch
+2026-05-03 15:55:44,795 INFO /home/azizul-hoq/.local/bin/bench serve --port 8001
+2026-05-03 15:55:44,827 INFO /home/azizul-hoq/.local/bin/bench schedule
+2026-05-03 15:55:44,845 INFO /home/azizul-hoq/.local/bin/bench worker
+2026-05-03 16:05:29,521 INFO /home/azizul-hoq/.local/bin/bench --site service clear-cache
+2026-05-03 16:08:24,510 INFO /home/azizul-hoq/.local/bin/bench --site service clear-cache
+2026-05-03 16:14:13,694 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-05-03 16:15:53,964 INFO /home/azizul-hoq/.local/bin/bench --site service execute import frappe; meta = frappe.get_meta('Support Technician Service Item'); print([(df.fieldname, df.fieldtype, df.permlevel) for df in meta.fields])
+2026-05-03 16:16:01,214 INFO /home/azizul-hoq/.local/bin/bench --site service execute import frappe; print(frappe.get_all('Customize Form Field', filters={'parent':'Customize Form', 'fieldname':'work_log'}, fields=['parenttype','parentfield','parent','fieldname','fieldtype','label','options']))
+2026-05-03 16:19:11,066 INFO /home/azizul-hoq/.local/bin/bench --site service migrate
+2026-05-03 16:19:38,881 INFO /home/azizul-hoq/.local/bin/bench --site service migrate

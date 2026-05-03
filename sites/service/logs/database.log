@@ -566,3 +566,19 @@ ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_end_time` datetime(6)
 ALTER TABLE `tabSupport Technician` ADD COLUMN `custom_total_time_taken` decimal(21,9) NOT NULL DEFAULT 0.0
 2026-05-02 19:26:45,179 WARNING database DDL Query made to DB:
 ALTER TABLE `tabSupport Technician` MODIFY `custom_total_time_taken` decimal(21,6) NOT NULL DEFAULT 0.0
+2026-05-03 15:32:49,402 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-03 15:32:49,404 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-03 15:32:49,405 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-03 15:32:49,532 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician Service Item` ADD COLUMN `start_time` datetime(6), ADD COLUMN `end_time` datetime(6)
+2026-05-03 15:48:40,439 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-03 15:48:40,440 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-03 15:48:40,441 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-03 16:14:19,492 WARNING database DDL Query made to DB:
+ALTER TABLE `tabSupport Technician` ADD COLUMN `total_time` decimal(21,9) NOT NULL DEFAULT 0.0

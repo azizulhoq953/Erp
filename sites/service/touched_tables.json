@@ -1,11 +1,19 @@
 [
-    "tabSingles",
-    "tabInstalled Application",
+    "tabDeleted",
     "tabCustom Field",
-    "tabCustom",
-    "tabInstalled",
+    "tabInstalled Application",
+    "tabRoute History",
+    "tabTag",
+    "tabPatch",
     "tabNavbar Item",
+    "tabSingles",
     "tabPortal",
+    "tabPortal Menu Item",
+    "tabCustom",
+    "tabTag Link",
+    "tabDeleted Document",
+    "tabPatch Log",
+    "tabRoute",
     "tabNavbar",
-    "tabPortal Menu Item"
+    "tabInstalled"
 ]
