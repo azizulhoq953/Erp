@@ -1,0 +1,144 @@
+2026-05-03 10:09:32,111 INFO ipython === bench console session ===
+2026-05-03 10:09:32,111 INFO ipython import frappe
+2026-05-03 10:09:32,111 INFO ipython frappe.init(user='Administrator')
+2026-05-03 10:09:32,111 INFO ipython # Verify report exists and has correct settings
+2026-05-03 10:09:32,111 INFO ipython report = frappe.get_doc('Report', 'Support Technician Report')
+2026-05-03 10:09:32,111 INFO ipython print(f"Report Type: {report.report_type}")
+2026-05-03 10:09:32,112 INFO ipython print(f"Ref Doctype: {report.ref_doctype}")
+2026-05-03 10:09:32,112 INFO ipython print(f"Is Standard: {report.is_standard}")
+2026-05-03 10:09:32,112 INFO ipython # Check if Python file can be imported
+2026-05-03 10:09:32,112 INFO ipython try:
+    from my_service_app.service_manage.report.support_technician_report.support_technician_report import execute
+    print("✓ Python module imported successfully")
+    
+    # Test execute function
+    cols, data = execute()
+    print(f"✓ Report executed: {len(cols)} columns, {len(data)} rows")
+    print(f"Columns: {[c['label'] for c in cols]}")
+except Exception as e:
+    print(f"✗ Error: {str(e)}")
+2026-05-03 10:09:32,112 INFO ipython === session end ===
+2026-05-03 10:09:43,940 INFO ipython === bench console session ===
+2026-05-03 10:09:43,940 INFO ipython import frappe
+2026-05-03 10:09:43,940 INFO ipython # Update report type to Script Report
+2026-05-03 10:09:43,941 INFO ipython frappe.db.set_value(
+    'Report',
+    'Support Technician Report',
+    'report_type',
+    'Script Report',
+    update_modified=False
+)
+2026-05-03 10:09:43,941 INFO ipython # Verify the change
+2026-05-03 10:09:43,941 INFO ipython report = frappe.get_doc('Report', 'Support Technician Report')
+2026-05-03 10:09:43,941 INFO ipython print(f"✓ Report type updated: {report.report_type}")
+2026-05-03 10:09:43,941 INFO ipython === session end ===
+2026-05-03 11:01:43,066 INFO ipython === bench console session ===
+2026-05-03 11:01:43,067 INFO ipython import frappe
+2026-05-03 11:01:43,068 INFO ipython rows = frappe.db.sql(
+    "SELECT name, custom_start_time, custom_end_time, start_time, end_time, custom_total_time_taken, custom_total_time, total_time FROM `tabSupport Technician` ORDER BY creation DESC LIMIT 20",
+    as_dict=True
+)
+2026-05-03 11:01:43,068 INFO ipython === session end ===
+2026-05-03 11:01:57,263 INFO ipython === bench console session ===
+2026-05-03 11:01:57,263 INFO ipython import frappe
+2026-05-03 11:01:57,264 INFO ipython cols = frappe.db.get_table_columns('Support Technician')
+2026-05-03 11:01:57,264 INFO ipython print(cols)
+2026-05-03 11:01:57,264 INFO ipython === session end ===
+2026-05-03 11:02:14,024 INFO ipython === bench console session ===
+2026-05-03 11:02:14,025 INFO ipython from my_service_app.service_manage.report.support_technician_report.support_technician_report import execute
+2026-05-03 11:02:14,025 INFO ipython cols, data = execute()
+2026-05-03 11:02:14,025 INFO ipython === session end ===
+2026-05-03 11:02:56,959 INFO ipython === bench console session ===
+2026-05-03 11:02:56,960 INFO ipython from my_service_app.service_manage.report.support_technician_report.support_technician_report import execute
+2026-05-03 11:02:56,960 INFO ipython cols, data = execute()
+2026-05-03 11:02:56,960 INFO ipython === session end ===
+2026-05-03 11:03:17,751 INFO ipython === bench console session ===
+2026-05-03 11:03:17,751 INFO ipython import frappe
+2026-05-03 11:03:17,752 INFO ipython rows = frappe.db.sql("SELECT name, custom_start_time, custom_end_time FROM `tabSupport Technician` ORDER BY creation DESC LIMIT 20", as_dict=True)
+2026-05-03 11:03:17,752 INFO ipython === session end ===
+2026-05-03 11:03:39,330 INFO ipython === bench console session ===
+2026-05-03 11:03:39,330 INFO ipython import frappe
+2026-05-03 11:03:39,331 INFO ipython from frappe.utils import get_datetime
+2026-05-03 11:03:39,331 INFO ipython def backfill_totals():
+    # detect total field
+    possible_totals = ['custom_total_time_taken','custom_total_time','total_time']
+    cols = frappe.db.get_table_columns('Support Technician')
+    total_field = next((f for f in possible_totals if f in cols), None)
+    print('Detected total field:', total_field)
+2026-05-03 11:03:39,331 INFO ipython     rows = frappe.db.sql("SELECT name, custom_start_time, custom_end_time FROM `tabSupport Technician` WHERE custom_start_time IS NOT NULL AND custom_end_time IS NOT NULL", as_dict=True)
+2026-05-03 11:03:39,331 INFO ipython     updated = 0
+2026-05-03 11:03:39,331 INFO ipython     for r in rows:
+        try:
+            s = get_datetime(r['custom_start_time'])
+            e = get_datetime(r['custom_end_time'])
+            secs = (e - s).total_seconds()
+            if secs is None or secs < 0:
+                continue
+            hours = round(secs/3600,6)
+            if total_field:
+                frappe.db.set_value('Support Technician', r['name'], total_field, hours, update_modified=False)
+            else:
+                frappe.db.set_value('Support Technician', r['name'], 'total_time', hours, update_modified=False)
+            updated += 1
+        except Exception as e:
+            print('error', r['name'], e)
+    print('Backfilled', updated, 'rows')
+2026-05-03 11:03:39,331 INFO ipython backfill_totals()
+2026-05-03 11:03:39,332 INFO ipython === session end ===
+2026-05-03 11:03:59,197 INFO ipython === bench console session ===
+2026-05-03 11:03:59,198 INFO ipython import frappe
+2026-05-03 11:03:59,198 INFO ipython from frappe.utils import get_datetime
+2026-05-03 11:03:59,198 INFO ipython cols = frappe.db.get_table_columns('Support Technician')
+2026-05-03 11:03:59,198 INFO ipython possible_totals = ['custom_total_time_taken','custom_total_time','total_time']
+2026-05-03 11:03:59,198 INFO ipython total_field = next((f for f in possible_totals if f in cols), None)
+2026-05-03 11:03:59,198 INFO ipython print('Detected total field:', total_field)
+2026-05-03 11:03:59,198 INFO ipython rows = frappe.db.sql("SELECT name, custom_start_time, custom_end_time, {} FROM `tabSupport Technician` WHERE custom_start_time IS NOT NULL AND custom_end_time IS NOT NULL".format(total_field if total_field else 'NULL'), as_dict=True)
+2026-05-03 11:03:59,199 INFO ipython updated = 0
+2026-05-03 11:03:59,199 INFO ipython for r in rows:
+    name = r['name']
+    cs = r.get('custom_start_time')
+    ce = r.get('custom_end_time')
+    cur_total = r.get(total_field) if total_field else None
+    try:
+        s = get_datetime(cs)
+        e = get_datetime(ce)
+        secs = (e - s).total_seconds()
+        if secs is None or secs < 0:
+            print('skip negative or none', name)
+            continue
+        hours = round(secs/3600,6)
+        if total_field:
+            if not cur_total or float(cur_total)==0:
+                frappe.db.set_value('Support Technician', name, total_field, hours, update_modified=False)
+                updated += 1
+                print('updated', name, hours)
+            else:
+                print('exists', name, cur_total)
+        else:
+            frappe.db.set_value('Support Technician', name, 'total_time', hours, update_modified=False)
+            updated += 1
+            print('updated fallback', name, hours)
+    except Exception as e:
+        print('error', name, e)
+print('Backfilled', updated, 'rows')
+2026-05-03 11:03:59,199 INFO ipython === session end ===
+2026-05-03 11:23:00,001 INFO ipython === bench console session ===
+2026-05-03 11:23:00,001 INFO ipython from my_service_app.service_manage.report.support_technician_report.support_technician_report import execute
+2026-05-03 11:23:00,002 INFO ipython cols, data = execute({})
+2026-05-03 11:23:00,002 INFO ipython print([c['fieldname'] for c in cols])
+2026-05-03 11:23:00,002 INFO ipython === session end ===
+2026-05-03 11:23:52,027 INFO ipython === bench console session ===
+2026-05-03 11:23:52,028 INFO ipython from my_service_app.service_manage.report.support_technician_report.support_technician_report import execute
+2026-05-03 11:23:52,028 INFO ipython cols, data = execute({})
+2026-05-03 11:23:52,028 INFO ipython print([c['fieldname'] for c in cols])
+2026-05-03 11:23:52,028 INFO ipython === session end ===
+2026-05-03 11:24:05,808 INFO ipython === bench console session ===
+2026-05-03 11:24:05,808 INFO ipython from my_service_app.service_manage.report.support_technician_report.support_technician_report import execute
+2026-05-03 11:24:05,808 INFO ipython cols, data = execute({})
+2026-05-03 11:24:05,808 INFO ipython print('rows:', len(data))
+2026-05-03 11:24:05,808 INFO ipython === session end ===
+2026-05-03 11:24:18,586 INFO ipython === bench console session ===
+2026-05-03 11:24:18,586 INFO ipython import frappe
+2026-05-03 11:24:18,587 INFO ipython report = frappe.get_doc('Report', 'Support Technician Report')
+2026-05-03 11:24:18,587 INFO ipython print(report.report_type)
+2026-05-03 11:24:18,587 INFO ipython === session end ===
