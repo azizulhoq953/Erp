@@ -582,3 +582,123 @@ alter table `tabSupport Technician Service Item` add column if not exists parent
 alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
 2026-05-03 16:14:19,492 WARNING database DDL Query made to DB:
 ALTER TABLE `tabSupport Technician` ADD COLUMN `total_time` decimal(21,9) NOT NULL DEFAULT 0.0
+2026-05-04 09:47:06,048 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 09:47:06,051 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 09:47:06,056 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 10:19:20,781 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 10:19:20,783 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 10:19:20,784 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 10:20:25,074 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 10:20:25,075 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 10:20:25,076 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 10:21:39,475 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 10:21:39,476 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 10:21:39,476 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 10:32:57,475 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 10:32:57,477 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 10:32:57,478 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 10:41:12,023 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 10:41:12,025 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 10:41:12,026 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:08:25,934 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:08:25,935 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:08:25,936 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:08:35,638 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:08:35,639 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:08:35,640 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:08:46,927 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:08:46,931 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:08:46,932 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:17:39,790 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:17:39,793 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:17:39,794 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:17:49,160 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:17:49,161 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:17:49,162 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:24:11,701 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:24:11,702 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:24:11,703 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:29:55,103 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:29:55,104 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:29:55,105 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:30:04,248 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:30:04,248 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:30:04,249 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:37:27,640 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:37:27,642 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:37:27,644 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 11:37:35,432 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 11:37:35,433 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 11:37:35,434 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 12:09:03,757 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 12:09:03,760 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 12:09:03,760 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 12:18:21,173 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 12:18:21,175 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 12:18:21,175 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 12:18:53,086 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 12:18:53,087 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 12:18:53,088 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-04 12:19:03,409 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parent varchar(140)
+2026-05-04 12:19:03,412 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
+2026-05-04 12:19:03,413 WARNING database DDL Query made to DB:
+alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
