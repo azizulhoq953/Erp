@@ -4,3 +4,24 @@ Form Dict: {'html': '<!DOCTYPE html> <html lang="en" dir="ltr"> <head>  <meta ch
 2026-05-05 16:04:57,508 ERROR frappe New Exception collected in error log
 Site: service
 Form Dict: {'report_name': 'Support Technician Report', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'js_filters': '[]', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-06 12:45:35,756 ERROR frappe New Exception collected in error log
+Site: service
+Form Dict: {'report_name': 'Technician Individual Performance', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'js_filters': '[]', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-06 12:47:46,768 ERROR frappe New Exception collected in error log
+Site: service
+Form Dict: {'report_name': 'Technician Individual Performance', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'js_filters': '[]', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-06 12:48:16,283 ERROR frappe New Exception collected in error log
+Site: service
+Form Dict: {'report_name': 'Technician Individual Performance', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'js_filters': '[]', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-06 12:49:14,319 ERROR frappe New Exception collected in error log
+Site: service
+Form Dict: {'report_name': 'Technician Individual Performance', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'js_filters': '[]', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-06 12:49:57,322 ERROR frappe New Exception collected in error log
+Site: service
+Form Dict: {'report_name': 'Technician Individual Performance', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'js_filters': '[]', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-06 12:52:47,730 ERROR frappe New Exception collected in error log
+Site: service
+Form Dict: {'report_name': 'Technician Individual Performance', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'js_filters': '[]', 'cmd': 'frappe.desk.query_report.run'}
+2026-05-06 12:53:53,531 ERROR frappe New Exception collected in error log
+Site: service
+Form Dict: {'report_name': 'Technician Individual Performance', 'filters': '{}', 'ignore_prepared_report': 'false', 'are_default_filters': 'true', 'js_filters': '[]', 'cmd': 'frappe.desk.query_report.run'}
