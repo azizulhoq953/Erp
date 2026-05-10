@@ -702,3 +702,5 @@ alter table `tabSupport Technician Service Item` add column if not exists parent
 alter table `tabSupport Technician Service Item` add column if not exists parenttype varchar(140)
 2026-05-04 12:19:03,413 WARNING database DDL Query made to DB:
 alter table `tabSupport Technician Service Item` add column if not exists parentfield varchar(140)
+2026-05-10 16:29:32,408 WARNING database DDL Query made to DB:
+ALTER TABLE `tabWorkspace` ADD COLUMN `support_technician` varchar(140)

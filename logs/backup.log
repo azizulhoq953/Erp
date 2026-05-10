@@ -58,3 +58,27 @@ Backup Summary for service at 2026-05-06 06:00:09.395420
 Config  : /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260506_060003-service-site_config_backup.json 216.0B
 Database: /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260506_060003-service-database.sql.gz 3.4MiB
 Backup for Site service has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_48b40acffa352c29 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _48b40acffa352c29 | /usr/bin/gzip >> ./service/private/backups/20260509_000004-service-database.sql.gz
+
+Backup Summary for service at 2026-05-09 00:00:10.625907
+Config  : /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260509_000004-service-site_config_backup.json 216.0B
+Database: /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260509_000004-service-database.sql.gz 3.5MiB
+Backup for Site service has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_48b40acffa352c29 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _48b40acffa352c29 | /usr/bin/gzip >> ./service/private/backups/20260509_120003-service-database.sql.gz
+
+Backup Summary for service at 2026-05-09 12:00:08.517640
+Config  : /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260509_120003-service-site_config_backup.json 216.0B
+Database: /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260509_120003-service-database.sql.gz 3.5MiB
+Backup for Site service has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_48b40acffa352c29 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _48b40acffa352c29 | /usr/bin/gzip >> ./service/private/backups/20260509_180047-service-database.sql.gz
+
+Backup Summary for service at 2026-05-09 18:00:54.160985
+Config  : /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260509_180047-service-site_config_backup.json 216.0B
+Database: /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260509_180047-service-database.sql.gz 3.5MiB
+Backup for Site service has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_48b40acffa352c29 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _48b40acffa352c29 | /usr/bin/gzip >> ./service/private/backups/20260510_120004-service-database.sql.gz
+
+Backup Summary for service at 2026-05-10 12:00:12.635804
+Config  : /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260510_120004-service-site_config_backup.json 216.0B
+Database: /home/azizul-hoq/frappe/erp-service/sites/service/private/backups/20260510_120004-service-database.sql.gz 3.5MiB
+Backup for Site service has been successfully completed
